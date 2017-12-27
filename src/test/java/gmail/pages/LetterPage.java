@@ -41,6 +41,6 @@ public class LetterPage {
     }
 
     public void assertMailSubjectAndBody(String ltr_Subject, String lrt_Body_Part) {
-        Assert.assertTrue((get_ltr_Subject_Text().contains(getExp_Ltr_Subject()) && (get_ltr_Body_Part_Text()).contains(getExp_Lrt_Body_Part())));
+        Assert.assertTrue((ltr_Subject.contains(getExp_Ltr_Subject())) && (lrt_Body_Part.contains(getExp_Lrt_Body_Part())));
     }
 }

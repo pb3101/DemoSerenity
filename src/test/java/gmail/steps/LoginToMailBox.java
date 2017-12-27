@@ -10,7 +10,7 @@ import net.thucydides.core.annotations.Steps;
 /**
  * Created by pavlo.balyuk on 12/4/2017.
  */
-//mvn -Dtest=LoginToMailBox test
+
 public class LoginToMailBox {
 
 
@@ -20,27 +20,27 @@ public class LoginToMailBox {
     @Given("user enters login page")
     public void givenUserOnLoginPage(){correctLogin.is_the_home_page();}
 
-    @When("the user enters incorrect username")
+    @When("the user enters correct username")
     public void entersCorrectUserName() {
         correctLogin.entersUserName();
     }
 
-    @Then(" and submits username")
+    @When("and submits username")
     public void clickButtonToSubmitUserName () {
         correctLogin.clickButtonToSubmitUserName();
     }
 
-    @Then("the user enters incorrect password")
+    @When("the user enters correct password")
     public void entersIncorrectPassWord () {
         correctLogin.entersPassword();
     }
 
-    @Then(" and submits password")
+    @When("and submits password")
     public void clickButtonToSubmitPassWord () {
         correctLogin.clickButtonToSubmitPassWord();
     }
 
-    @Then("user click on account dropdown")
+    @When("user click on account dropdown")
     public void clickAccountDropDown() {
         correctLogin.clickAccountDropDown();
     }

@@ -16,30 +16,30 @@ public class LoginWrongPassword {
     @Steps
     StepsLoginWrongPassWord passWord;
 
-    @Given("user enters login page")
+    @Given("login for wrong password")
     public void givenUserOnLoginPage(){passWord.is_the_home_page();}
 
-    @When("the user enters incorrect username")
+    @When("reach password input enters correct username")
     public void entersCorrectUserName() {
         passWord.entersUserName();
     }
 
-    @Then(" and submits username")
+    @Then("click username confirm button")
     public void clickButtonToSubmitUserName () {
         passWord.clickButtonToSubmitUserName();
     }
 
-    @Then("the user enters incorrect password")
+    @Then("the user enters wrong password")
     public void entersIncorrectPassWord () {
         passWord.entersPassword();
     }
 
-    @Then(" and submits password")
+    @Then("and submits form")
     public void clickButtonToSubmitPassWord () {
         passWord.clickButtonToSubmitPassWord();
     }
 
-    @Then("they should see validation error")
+    @Then("see password validation error")
     public void shouldSeeValidationError() {
         passWord.should_see_error_message();
     }

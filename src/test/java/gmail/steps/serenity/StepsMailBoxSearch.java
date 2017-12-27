@@ -62,7 +62,7 @@ public class StepsMailBoxSearch {
 
     @Step
     public void verifyLetterSubjectAndBody() {
-        letterPage.assertMailSubjectAndBody(letterPage.get_ltr_Subject_Text(), letterPage.get_ltr_Subject_Text());
+        letterPage.assertMailSubjectAndBody(letterPage.get_ltr_Subject_Text(), letterPage.getExp_Lrt_Body_Part());
     }
 
     @Step

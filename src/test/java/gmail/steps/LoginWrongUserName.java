@@ -15,20 +15,20 @@ public class LoginWrongUserName {
    @Steps
    StepsLoginWrongUserName login;
 
-   @Given("user enters login page")
+   @Given("login page for incorrect username")
    public void givenUserOnLoginPage(){login.is_the_home_page();}
 
-   @When("the user enters incorrect username")
+   @When("enters incorrect username")
    public void entersincorrectUserName() {
        login.entersUserName();
     }
 
-   @Then(" and submits entry")
+   @Then("to get error submits username")
    public void clickButtonToSubmitUserName () {
         login.clickButtonToSubmitUserName();
     }
 
-   @Then("they should see validation error")
+   @Then("see username error message")
    public void shouldSeeValidationError() {
        login.should_see_error_message();
     }

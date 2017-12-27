@@ -17,57 +17,60 @@ public class MailBoxSeacrch {
     @Steps
     StepsMailBoxSearch letterSearch;
 
-    @Given("user enters login page")
+    @Given("user enters login page for mail search")
     public void givenUserOnLoginPage() {
         letterSearch.is_the_home_page();
     }
 
-    @When("the user enters incorrect username")
+    @When("to able to search mail input correct username")
     public void entersCorrectUserName() {
         letterSearch.entersUserName();
     }
 
-    @Then(" and submits username")
+    @Then("for mail search submits username")
     public void clickButtonToSubmitUserName() {
         letterSearch.clickButtonToSubmitUserName();
     }
 
-    @Then("the user enters incorrect password")
+    @Then("enters valid password")
     public void entersIncorrectPassWord() {
         letterSearch.entersPassword();
     }
 
-    @Then(" and submits password")
+    @Then("to reach mailbox submit valid password")
     public void clickButtonToSubmitPassWord() {
         letterSearch.clickButtonToSubmitPassWord();
     }
+//
+//    @Then("take action to see profile")
+//    public void clickMyAccountInfo(){letterSearch.clickAccountDropDown();}
+//
+//    @Then("verify login to mailbox")
+//    public void verifyMyAccountInfo() {
+//        letterSearch.verifyAccountLogined();
+//    }
 
-    @Then("user verify that he is logged in")
-    public void verifyMyAccountInfo() {
-        letterSearch.verifyAccountLogined();
-    }
-
-    @Then("")
+    @Then("search for letter")
     public void searchForLetter() {
         letterSearch.searchForLetter();
     }
 
-    @Then("")
+    @Then("enters letter content")
     public void enterLetterContent() {
         letterSearch.clickOnLetter();
     }
 
-    @Then("")
+    @Then("verify correctness of mail")
     public void verifyThatLetterAsExpected() {
         letterSearch.verifyLetterSubjectAndBody();
     }
 
-    @Then("user click on account dropdown")
+    @Then("hits on profile dropdown")
     public void clickAccountDropDown() {
         letterSearch.clickAccountDropDown();
     }
 
-    @Then("user click on account dropdown")
+    @Then("user click on logout button")
     public void clickButtonLogOut() {
         letterSearch.clickLogOut();
     }

@@ -48,7 +48,6 @@ public class LoginPage extends PageObject {
     }
 
     public void setInpt_userName(String userName) {
-        inpt_userName.waitUntilVisible().clear();
         inpt_userName.sendKeys(userName);
     }
 
@@ -57,8 +56,7 @@ public class LoginPage extends PageObject {
     }
 
     public void setInpt_passWord(String passWord) {
-        inpt_userName.waitUntilVisible().clear();
-        inpt_userName.sendKeys(passWord);
+        inpt_passWord.sendKeys(passWord);
     }
 
     public void click_btn_nextToPass() {
